@@ -1,7 +1,10 @@
 module Math.NT.PrimeCounter where
 
-sumChebotarev' :: [Int] -> Int -> Int
-sumChebotarev' ps q = sum $ binaryFilter_Chebotarev' ps q
+import Math.NT.Primes
+
+sumChebotarev' :: Int -> Int -> Int
+sumChebotarev' x q = sum $ binaryFilter_Chebotarev' ps q
+  where ps = filter isPrime $ take x [1..]
 
 binaryFilter_Chebotarev' :: [Int] -> Int -> [Int]
 binaryFilter_Chebotarev' ps q = map mappableFilter_Chebotarev  ps

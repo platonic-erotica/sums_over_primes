@@ -12,6 +12,10 @@ primeFactors n = iter n primes
           let (d, r) = n `divMod` p
           in if r == 0 then p : iter d ps else iter n ps'
 
+isPrime :: Int -> Bool
+isPrime n | n < 2     = False
+          | otherwise =  all (\p -> n `mod` p /= 0) . takeWhile ((<= n) . (^ 2)) $ primes
+
 primes :: [Int]
 primes = 2: 3: sieve 0 (tail primes) 3
 
