@@ -16,6 +16,6 @@ build-type:          Simple
 cabal-version:       >=1.8
 
 library
-  exposed-modules:     Math.NT.PrimeCounter
+  exposed-modules:     Math.NT.PrimeCounter, Math.NT.Primes
   -- other-modules:       
   build-depends:       base ==4.6.*
