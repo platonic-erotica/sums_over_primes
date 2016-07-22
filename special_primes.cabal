@@ -14,12 +14,12 @@ cabal-version:       >=1.8
 
 library
   exposed-modules:     Math.NT.PrimeCounter, Math.NT.Primes
-  build-depends:       base ==4.6.*
+  build-depends:       base ==4.6.*, primes ==0.2.*
 
---executable chebotarev
---  hs-source-dirs: chebotarev
---  main-is:        Main.hs
---  build-depends:  base ==4.6.*
+executable chebotarev
+  hs-source-dirs: chebotarev
+  main-is:        Main.hs
+  build-depends:  base ==4.6.*, primes ==0.2.*, pmodq
 
 executable pM1_divisors
   hs-source-dirs: pM1_divisors

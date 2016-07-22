@@ -7,3 +7,10 @@
   (major1) == 4 && (major2) <  6 || \
   (major1) == 4 && (major2) == 6 && (minor) <= 0)
 
+/* package primes-0.2.1.0 */
+#define VERSION_primes "0.2.1.0"
+#define MIN_VERSION_primes(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  2 || \
+  (major1) == 0 && (major2) == 2 && (minor) <= 1)
+
